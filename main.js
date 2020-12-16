@@ -23,12 +23,12 @@ $(document).ready(() => {
     });
 
     $(".myProfilePic").on("mouseenter touchstart", () => {
-        console.log("hello world")
+        // console.log("hello world")
 
         $(".backgroundImageOverlay").css("opacity", ".5")
     });
     $(".myProfilePic").on("mouseleave touchend touchmove", () => {
-        console.log("hello world")
+        // console.log("hello world")
 
         $(".backgroundImageOverlay").css("opacity", "0")
     })
