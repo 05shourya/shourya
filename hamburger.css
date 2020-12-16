@@ -1,0 +1,139 @@
+
+.hamburgerMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: gold; */
+    width: 10rem;
+    height: 10rem;
+    display: grid;
+    place-content: center;
+    z-index: 9;
+}
+
+.lines {
+    background: rgba(248, 238, 238, 0.8);
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%); */
+    margin-bottom: 0.6rem;
+}
+.navPage {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+.navPageOpen {
+    left: 0;
+}
+
+.backgroundImageForNavPage {
+    background: url("./coolBackground.jpg");
+    filter: blur(0.6rem);
+    -webkit-filter: blur(0.6rem);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+.btns {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    z-index: 1;
+}
+
+.btn {
+    width: 20rem;
+    height: 5rem;
+    /*border: thin solid #fff;
+    */
+    margin-bottom: 2rem;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 550px){
+    html{
+        font-size: 45% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    html {
+        font-size: 130%;
+    }
+}
+
+@media screen and (min-width: 2170px) {
+    html {
+        font-size: 150%;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    html {
+        font-size: 180%;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    html {
+        font-size: 220%;
+    }
+}
+
+.lineContainer {
+    cursor: pointer;
+}
+

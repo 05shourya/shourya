@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+
+body {
+    background-color: #222;
+}
+
+html {
+    font-size: 80%;
+}
+/* 
+*{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+} */
+
+.theDocument{
+    position: absolute;
+    /*width: 100vw;
+    height: 5rem;
+    */height: 43rem;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50% , -50%);
+    -webkit-transform:translate(-50% , -50%);
+    -moz-transform:translate(-50% , -50%);
+    -ms-transform:translate(-50% , -50%);
+    -o-transform:translate(-50% , -50%);
+}
+
+.container {
+    width: 33rem;
+    height: 22rem;
+    position: relative;
+    left: 50%;
+    top: 0rem;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    /* border: thin solid white; */
+}
+
+.card {
+    background: transparent;
+    height: 19rem;
+    width: 17rem;
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    transform: translateX(-50%);
+    box-shadow: 0rem 0rem 0.5rem #111;
+    border-radius: 1rem 1rem 3rem 1rem;
+    -webkit-border-radius: 1rem 1rem 3rem 1rem;
+    -moz-border-radius: 1rem 1rem 3rem 1rem;
+    -ms-border-radius: 1rem 1rem 3rem 1rem;
+    -o-border-radius: 1rem 1rem 3rem 1rem;
+    /* border: thin solid white; */
+}
+
+.eyeL,
+.eyeR,
+.nose {
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    top: 3rem;
+    border-radius: 50%;
+}
+
+.eyeL {
+    left: 3rem;
+    background: rgb(66, 133, 244);
+}
+
+.eyeR {
+    right: 3rem;
+    background: rgb(234, 67, 53);
+}
+
+.nose {
+    background: rgb(251, 188, 5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.smile {
+    background: transparent;
+    border-bottom: 0.3rem solid #00a86b;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.text {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    left: 50%;
+    top: 24rem;
+    transform: translateX(-50%);
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    /* border:thin solid white ; */
+}
+
+.a {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #4568dc, #b06ab3);
+    font-family: "Comfortaa", cursive;
+    width: max-content;
+    height: max-content;
+    /* border: thin solid white; */
+}
+
+.line {
+    background-color: rgba(250, 250, 250, 0.4);
+    height: 0.5rem;
+    width: 20rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 25.5rem;
+    transform: translateX(-50%);
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.waves {
+    width: 32rem;
+    height: 8rem;
+    position: absolute;
+    top: 27rem;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: thin solid white; */
+}
+
+.w {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 1rem;
+    height: 6rem;
+    width: 0.8rem;
+    opacity: 0.5;
+    animation: size 1s ease-in-out infinite;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+@keyframes size {
+    50% {
+        height: 3rem;
+    }
+}
+
+.wave1 {
+    left: 8rem;
+    background: #4169e1;
+}
+
+.wave2 {
+    left: 11.2rem;
+    background: rgb(234, 67, 53);
+    animation-delay: 0.4s;
+}
+
+.wave3 {
+    right: 11.2rem;
+    background: rgb(251, 188, 5);
+    animation-delay: 0.4s;
+}
+
+.wave4 {
+    right: 8rem;
+    background: #00a86b;
+}
+
+.mid_wave {
+    background: linear-gradient(to top right, indigo, royalblue);
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: change 2s ease-in-out infinite;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-animation: change 2s ease-in-out infinite;
+}
+
+@keyframes change {
+    25% {
+        width: 6rem;
+        height: 0.8rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+    }
+    50% {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    75% {
+        width: 0.8rem;
+        height: 6rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+    }
+    100% {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.s {
+    width: 7rem;
+    height: 1rem;
+    top: 50%;
+    transform: translateY(-50%, -50%);
+    position: absolute;
+    border-radius: 1.5rem;
+    opacity: 0.7;
+    animation: size_change 1s ease-in-out infinite;
+    -webkit-transform: translateY(-50%, -50%);
+    -moz-transform: translateY(-50%, -50%);
+    -ms-transform: translateY(-50%, -50%);
+    -o-transform: translateY(-50%, -50%);
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    -webkit-animation: size_change 1s ease-in-out infinite;
+}
+
+@keyframes size_change {
+    50% {
+        width: 3.5rem;
+    }
+    100% {
+        width: 7rem;
+    }
+}
+
+.left_wave {
+    left: 0rem;
+    background: linear-gradient(to left, royalblue, skyblue);
+}
+
+.right_wave {
+    right: 0rem;
+    background: linear-gradient(to right, royalblue, skyblue);
+}
+
+.d {
+    background: linear-gradient(to top, #3a7bd5, #3a6073);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    animation: up_and_down 1s 1s ease-in-out infinite;
+    -webkit-animation: up_and_down 1s 1s ease-in-out infinite;
+}
+
+@keyframes up_and_down {
+    50% {
+        top: 6.5rem;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+
+.left_design {
+    left: 5.5rem;
+}
+
+.right_design {
+    right: 5.5rem;
+}
+
+.dot {
+    background: linear-gradient(to top, #3a7bd5, #3a6073);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+}
+
+.left_dot {
+    left: 5.5rem;
+    animation: left_run 1s 1s ease-in-out infinite;
+}
+
+@keyframes left_run {
+    50% {
+        left: 0.2rem;
+    }
+    100% {
+        left: 5.5rem;
+    }
+}
+
+.right_dot {
+    right: 5.5rem;
+    animation: right_run 1s 1s ease-in-out infinite;
+    -webkit-animation: right_run 1s 1s ease-in-out infinite;
+}
+
+@keyframes right_run {
+    50% {
+        right: 0.2rem;
+    }
+    100% {
+        right: 5.5rem;
+    }
+}
+
+.icons {
+    width: 31rem;
+    height: 6rem;
+    position: absolute;
+    top:37rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4rem;
+    border: 0.3rem solid rgba(23, 112, 228, 0.4);
+    border-top: transparent;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+}
+
+.fa-play {
+    color: #1770e4;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* transition-duration: 1s; */
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.fa-fast-forward,
+.fa-fast-backward {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #eeeeff;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.fa-fast-forward {
+    right: 10rem;
+}
+
+.fa-fast-backward {
+    left: 10rem;
+}
+
+.fa-step-forward,
+.fa-step-backward {
+    color: #eeeeff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.fa-step-forward {
+    right: 6rem;
+}
+
+.fa-step-backward {
+    left: 6rem;
+}
+
+.volume {
+    width: 4rem;
+    height: 16rem;
+    border-radius: 4rem;
+    background-color: rgba(250, 250, 250, 0.5);
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    opacity: 0;
+    animation: opacity 4.5s ease-in;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.level {
+    width: 85%;
+    height: 60%;
+    background-color: royalblue;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.5rem 0.5rem 2rem 2rem;
+    animation: volume_level 1.5s ease-in-out;
+    -webkit-border-radius: 0.5rem 0.5rem 2rem 2rem;
+    -moz-border-radius: 0.5rem 0.5rem 2rem 2rem;
+    -ms-border-radius: 0.5rem 0.5rem 2rem 2rem;
+    -o-border-radius: 0.5rem 0.5rem 2rem 2rem;
+    -webkit-animation: volume_level 1.5s ease-in-out;
+}
+
+@keyframes volume_level {
+    0% {
+        height: 0;
+    }
+}
+
+.fa-volume-up {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Comfortaa", cursive;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+/* 
+.follow {
+    width: 28rem;
+    height: 5rem;
+    border-radius: 3rem;
+    position: absolute;
+    top: 40rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0.5rem 0.6rem 0.7rem #111;
+    font-family: "Comfortaa", cursive;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+} */
+
+a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.4rem;
+}
+
+@media screen and (max-width:430px) {
+    html{
+        font-size: 70%;
+    }
+}

@@ -1,0 +1,206 @@
+.hamburgerMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: gold; */
+    width: 10rem;
+    height: 8rem;
+    display: grid;
+    place-content: center;
+    z-index: 99;
+}
+
+.lines {
+    background: rgba(248, 238, 238, 0.8);
+    width: 3rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%); */
+    margin-bottom: 0.6rem;
+}
+
+.lines:nth-child(1) {
+    background: rgb(76, 144, 208);
+}
+
+.lines:nth-child(2) {
+    background: rgb(209, 145, 102);
+}
+
+.lines:nth-child(3) {
+    background: rgb(69, 170, 111);
+}
+
+.navPage {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    transform: translateX(-105vw);
+    top: 0;
+    z-index: 98;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transform: translateX(-105vw);
+    -moz-transform: translateX(-105vw);
+    -ms-transform: translateX(-105vw);
+    -o-transform: translateX(-105vw);
+}
+
+.navPageOpen {
+    /* left: 0; */
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.backgroundImageForNavPage {
+    background: url("./navImage.jpg");
+    filter: blur(0.6rem);
+    -webkit-filter: blur(0.6rem);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+.btns {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    width: 20rem;
+    height: 5rem;
+    /*border: thin solid #fff;*/
+    margin-bottom: 2rem;
+    display: grid;
+    place-content: center;
+    font-size: 2em;
+    font-weight: 200;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+/* 
+.btn-positions{
+    border: thin solid white;
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+} */
+
+/* .btn:hover {
+    background: #fff;
+    color: #000;
+} */
+
+.contactBtn {
+    border: medium solid transparent;
+}
+
+.icons {
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+}
+
+/* .icons:hover{
+    background: transparent;
+    border-bottom: medium solid #fff;
+} */
+
+.fab {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+/* 
+.fab:hover{
+    color: #fff;
+} */
+
+.icons b {
+    margin: 0.6rem;
+    /* box-shadow: 1px 1px #333, 2px 2px #333, 3px 3px #333, 4px 4px #333; */
+}
+
+/* .contactMe:hover {
+    background: transparent;
+    border-bottom: medium solid #fff;
+    color: #fff;
+} */
+
+@media screen and (max-width: 990px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+.lineContainer {
+    cursor: pointer;
+}

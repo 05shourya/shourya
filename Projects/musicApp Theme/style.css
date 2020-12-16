@@ -1,0 +1,527 @@
+/*
+  /////////////////////////////////////•
+ /////////////////////////////////////••
+//////////                 //////////•••
+•••••••••••Made By Shourya••••••••••••••
+\\\\\\\\\\                 \\\\\\\\\\•••
+ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\••
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\•
+  
+  
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+html {
+    font-size: 62.5%;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    html {
+        font-size: 58%;
+    }
+}
+/* 
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 150%;
+    }
+} */
+
+@media screen and (max-height: 400px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+@media screen and (max-height: 200px) {
+    html {
+        font-size: 30%;
+    }
+}
+
+body {
+    margin: 0;
+    background: #111;
+    font-family: "Quicksand", sans-serif;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+* {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+/* ! Styling Theme Selector Page ! */
+
+.themeSelector {
+    background: linear-gradient(to top, #121212 50%, #ddd 50%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.themeSelectorBox {
+    width: 25rem;
+    height: 17rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.ThemeText {
+    width: 22rem;
+    font-size: 2rem;
+    white-space: nowrap;
+    height: 5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.3rem;
+    user-select: none;
+}
+
+.lightTheme {
+    border: thin solid #111;
+    top: 2rem;
+    color: #111;
+    transition-duration: 0.2s;
+}
+
+.lightThemeHover {
+    background: #111;
+    color: #ddd;
+}
+
+.darkTheme {
+    border: thin solid #ddd;
+    bottom: 2rem;
+    color: #ddd;
+    transition-duration: 0.2s;
+}
+
+.darkThemeHover {
+    background: #ddd;
+    color: #111;
+}
+
+b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+/* ! Styling of Theme Selector Page Ends Here  ! */
+
+/* ! Styling Main Content ! */
+
+.mainContent {
+    background: #111;
+    display: none;
+}
+
+.mainContentBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: calc(30rem + 9rem);
+}
+
+.commonClass {
+    color: #ddd;
+}
+
+.songDetails {
+    background: #121212;
+    width: 30rem;
+    height: 30rem;
+    box-shadow: 0 0 0.7rem #000;
+    border-radius: 0.7rem 0.7rem 50% 50%;
+    display: grid;
+    position: absolute;
+    top: 0;
+    letter-spacing: 0.2rem;
+}
+
+.mediaControls {
+    background: #121212;
+    width: 30rem;
+    height: 6rem;
+    box-shadow: 0 0 0.7rem #000;
+    border-radius: 10rem;
+    top: calc(30rem + 3rem);
+    position: absolute;
+}
+
+.lightThemeFunc {
+    background: #ddd;
+    box-shadow: 0 0 0.7rem #aaa;
+    color: #121212;
+    letter-spacing: 0.2rem;
+}
+
+.lightThemeFunc .controlButtons:hover {
+    background: rgba(18, 18, 18, 0.3);
+}
+
+.detailPosition {
+    position: absolute;
+}
+
+.songName {
+    width: 25rem;
+    height: 4rem;
+    font-size: 2.5rem;
+    top: 2rem;
+    left: 2.5rem;
+}
+
+.songArtist {
+    width: 20rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #aaa;
+    top: 7rem;
+    left: 5rem;
+}
+
+.lightThemeFunc .songArtist {
+    color: #666;
+}
+
+.imageContainer {
+    width: 10rem;
+    height: 10rem;
+}
+
+.img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    top: 13rem;
+    left: 8rem;
+    border: thin solid transparent;
+}
+
+.playAnimation {
+    border-color: rgb(25, 121, 255);
+    animation: anime 1s linear infinite;
+}
+
+.anime2 {
+    animation-delay: 0.5s;
+}
+
+@keyframes anime {
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.controlButtons {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.3s;
+    font-size: 2rem;
+}
+
+.fa {
+}
+
+.controlButtons:hover {
+    background: rgba(221, 221, 221, 0.3);
+}
+
+.play,
+.pause {
+    left: 13rem;
+}
+
+.pause {
+    display: none;
+}
+
+.previous {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+.navLines {
+    left: 3rem;
+    top: 1rem;
+    position: fixed;
+    z-index: 999;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.navLinesHover {
+    background: rgba(80, 80, 223, 0.3);
+}
+
+.lines {
+    position: relative;
+    width: 2.5rem;
+    height: 0.3rem;
+    margin-top: 0.5rem;
+    background: #ddd;
+    border-radius: 0.3rem;
+}
+
+.line1 {
+    margin: 0;
+}
+
+.navBar {
+    background: linear-gradient(to bottom right, #ff5c5c 15%, #4169e1 15%);
+    position: fixed;
+    top: 0;
+    /* left: -100vw; */
+    transform: translateX(-100vw);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.openNavBar {
+    /* left: 0; */
+    transform: translateX(0);
+}
+
+.navContents {
+    position: absolute;
+    width: 95vw;
+    height: 95vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    place-content: center;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.profile,
+.displayPicture {
+    width: 20rem;
+    height: 20rem;
+    border: thin solid rgba(19, 11, 11, 0.4);
+    position: relative;
+    border-radius: 50%;
+    margin-top: 5rem;
+}
+
+.displayPicture {
+    margin: 0;
+}
+
+.switchTheme {
+    width: 20rem;
+    height: 7rem;
+    border: thin solid rgba(19, 11, 11, 0.8);
+    position: relative;
+    border-radius: 0.4rem;
+    transition-duration: 0.3s;
+    font-size: 2rem;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.switchThemeHover {
+    background: rgba(19, 11, 11, 0.4);
+}
+
+.wholeDocument {
+    display: none;
+}
+
+.Loader {
+    z-index: 9999;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #303840;
+}
+
+.circ {
+    width: 22.95rem;
+    height: 22.95rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.main {
+    animation: Rotate 1.5s linear infinite;
+    position: absolute;
+    width: 14.85rem;
+    height: 14.85rem;
+    left: 4.05rem;
+    top: 4.05rem;
+}
+
+@keyframes Rotate {
+    25%,
+    50% {
+        transform: rotate(90deg);
+    }
+
+    75%,
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.sq {
+    position: absolute;
+    width: 4.05rem;
+    height: 4.05rem;
+    transform: rotate(45deg);
+}
+
+.first-sq {
+    background: #111;
+    left: 5.4rem;
+    top: 0;
+}
+
+.second-sq {
+    background: #cdcdcd;
+    left: 10.8rem;
+    top: 5.4rem;
+}
+
+.third-sq {
+    background: #111;
+    left: 5.4rem;
+    top: 10.8rem;
+}
+
+.fourth-sq {
+    background: #cdcdcd;
+    left: 0;
+    top: 5.4rem;
+}
+
+.dot {
+    position: absolute;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 50%;
+}
+
+.first-dot {
+    background: #cdcdcd;
+    top: 4.05rem;
+    left: 0.54rem;
+    animation: first-dot 1.5s linear infinite;
+}
+
+@keyframes first-dot {
+    25%,
+    50% {
+        top: 17.55rem;
+    }
+
+    75%,
+    100% {
+        top: 4.05rem;
+    }
+}
+
+.second-dot {
+    background: #111;
+    right: 0.54rem;
+    top: 17.55rem;
+    animation: second-dot 1.5s linear infinite;
+}
+
+@keyframes second-dot {
+    25%,
+    50% {
+        top: 4.05rem;
+    }
+
+    75%,
+    100% {
+        top: 17.55rem;
+    }
+}
+
+.loadingText {
+    position: absolute;
+    width: 18rem;
+    height: 5rem;
+    bottom: 4rem;
+    font-size: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: opacityChange 1s linear infinite;
+}
+
+@keyframes opacityChange {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loadingText b {
+    font-weight: 100;
+}

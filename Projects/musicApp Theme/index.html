@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App Theme</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../fontAwesome/all.css">
+    <script src="../../jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="wholeDocument">
+        <div class="themeSelector" id="themeSelector">
+            <div class="themeSelectorBox" id="themeSelectorBox">
+                <div class="lightTheme ThemeText" id="lightTheme">
+                    <b>Light Theme</b>
+                </div>
+                <div class="darkTheme ThemeText" id="darkTheme">
+                    <b>Dark Theme</b>
+                </div>
+            </div>
+        </div>
+        <!-- ! Theme Selector Page Ends Here ! -->
+        <!-- ! Main Content from Hereee ! -->
+        <div class="mainContent" id="mainContent">
+            <div class="mainContentBox " id="mainContentBox">
+                <div class="songDetails commonClass" id="songDetails">
+                    <div class="songName detailPosition">
+                        <b>Thunderclouds</b>
+                    </div>
+                    <div class="songArtist detailPosition">
+                        <b>LSD</b>
+                    </div>
+                    <audio loop src="https://drive.google.com/uc?id=1-8tAEZfxEHbKjRK5NOcoESoffZrSufyv&export=download"
+                        class="audio" id="audio"></audio>
+                    <div class="img">
+                        <img class="img detailPosition"
+                            src="https://i.iheart.com/v3/url/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaWhyLWluZ2VzdGlvbi1waXBlbGluZS1wcm9kdWN0aW9uLXNibWcvQTEwMzAxQTAwMDM5NzMyNTk1XzIwMTgwODA4MTczMDU5NDYyLzU1NzA0ODE3LjIwMTI2LmpwZw==?ops=fit%28480%2C480%29&surrogate=1cOXl179JY-syhxYSCX6Q1ahJ9ekBKwf7UslJDIRMVUNFyA2yHLQK2CqonJrRJE_BupHG9Av_DUfodCYC18hkRSejhg_jFEYgsgY8pJKZDDDTYO146u3nNQDogwFma1k8cX8JT-qRqtNtaoTV_5PauCrkOd3E1U6L6Mxg0uQIV6d-3Y_Wia6klCiC1mMKjQvMzjaFuWRiCrEloLBzUlpSgMrbxMFxm5aikX40IIcxcm1GCZiqPqvZv-KHh6HKuvsDN9xpdvLXl07c_y4emm5-h-7H-0SycxO_pHFsbSpPh_l1X8K0Jg6pYMAMy23mg%3D%3D"
+                            alt="Image isn't supported By your Browser :/">
+                    </div>
+                    <div class="detailPosition img anime1"></div>
+                    <div class="detailPosition img anime2"></div>
+                </div>
+                <div class="mediaControls commonClass" id="mediaControls">
+                    <div class="play controlButtons" id="play">
+                        <b><i class="fa fa-play" aria-hidden="true"></i></b>
+                    </div>
+                    <div class="pause controlButtons" id="pause">
+                        <b><i class="fa fa-pause" aria-hidden="true"></i></b>
+                    </div>
+                    <div class="next controlButtons" id="next">
+                        <b><i class="fa fa-step-forward" aria-hidden="true"></i></b>
+                    </div>
+                    <div class="previous controlButtons" id="previous">
+                        <b><i class="fa fa-step-backward" aria-hidden="true"></i></b>
+                    </div>
+                </div>
+            </div>
+            <!-- ! Navbar  -->
+            <div class="navLines" id="navLines">
+                <div class="lines line1"></div>
+                <div class="lines line2"></div>
+                <div class="lines line3"></div>
+            </div>
+            <div class="navBar" id="navBar">
+                <div class="navContents">
+                    <div class="switchTheme" id="switchTheme">
+                        <b> Switch Theme</b>
+                    </div>
+                    <div class="profile">
+                        <img class="displayPicture"
+                            src="https://blob.sololearn.com/avatars/d29b60c3-5e37-4dfb-af32-b0d4a94fdbdf.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! Main Content Ends ! -->
+    <!-- Loading Screen -->
+    <div class="Loader">
+        <div class="circ">
+            <div class="main">
+                <div class="sq first-sq"></div>
+                <div class="sq second-sq"></div>
+                <div class="sq third-sq"></div>
+                <div class="sq fourth-sq"></div>
+            </div>
+            <div class="dot first-dot"></div>
+            <div class="dot second-dot"></div>
+        </div>
+        <div class="loadingText">
+            <b>Please Wait..</b>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
