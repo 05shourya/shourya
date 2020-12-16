@@ -54,8 +54,8 @@ $(document).ready(()=>{
 let locations = ["../Projects/musicApp Theme 3/index.html" , "../Projects/musicApp Theme/index.html" , "../Projects/musicApp Theme 2/index.html" , "../Projects/CssAnimations/index.html" , "../Projects/Css Animations 2/index.html" , "../Projects/Google/index.html" , "../Projects/PureCSS Drawing/index.html"]
 
 for (let index = 0; index < ArrayOfClasses.length; index++) {
-    console.log(ArrayOfClasses[index]) ; 
-    console.log(locations[index]) ; 
+    // console.log(ArrayOfClasses[index]) ; 
+    // console.log(locations[index]) ; 
     
     $(ArrayOfClasses[index]).click(()=>{
         window.open(locations[index] , "_blank") 
