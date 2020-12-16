@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../hamburgerAndMediaQueries/hamburger.css">
+    <link rel="stylesheet" href="../fontAwesome/all.css">
+    <link rel="stylesheet" href="./dist/aos.css">
+    <link rel="stylesheet" href="../swiperjs/swiper-bundle.css">
+    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css">
+    <script src="../swiperjs/swiper-bundle.js"></script>
+    <script src="../swiperjs/swiper-bundle.min.js"></script>
+    <script src="./dist/aos.js"></script>
+</head>
+
+<body>
+    <div class="hamburgerMenu">
+
+        <div class="lineContainer">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+        </div>
+    </div>
+    <div class="navPage">
+        <div class="backgroundImageForNavPage"></div>
+        <div class="btns">
+            <div class="btn home">
+                <b>Home</b>
+            </div>
+            <div class="btn aboutMe">
+                <b>About Me [Projects Included]</b>
+            </div>
+            <div class="btn contactMe contactBtn">
+                <b>Say Hi ! </b>
+            </div>
+            <div class="btn contactBtn icons">
+                <b><i class="fab fa-github-square"></i></b>
+                <b><i class="fab fa-instagram-square"></i></b>
+            </div>
+        </div>
+    </div>
+    <header class="upper-text">
+        <h1 class="heading">About Me</h1>
+    </header>
+    <section class="section thisIsAboutMe">
+        <p class="paragraph">I am Shourya since 14-Aug-2003 from India , A begginer to web development (Currently a Frontend Developer and looking towards FullStack Developer) . My Intrest in this field came when I was 14(In 9th std.) , Luckly , I got an Mobile App known as SoloLearn which taught me to Code. I've made some Projects which You can have a look on (Developed These Projects when I was Just a starter , altough I have Improved responsiveness , colors and other major things.) .  </p>
+        <div class="beforeMySkills hr"></div>
+        <div class="mySkills contents">
+            <p class="mySkillPara stickyPosition">My Skills</p>
+            <div class="html ">
+                <p class="skillLabel">HTML</p>
+                <div class="skillBar">
+                    <div class="htmlSkillProgress SkillProgress"></div>
+                </div>
+            </div>
+            <div class="css ">
+                <p class="skillLabel">CSS</p>
+                <div class="skillBar">
+                    <div class="cssSkillProgress SkillProgress"></div>
+                </div>
+            </div>
+            <div class="js ">
+                <p class="skillLabel">JS</p>
+                <div class="skillBar">
+                    <div class="jsSkillProgress SkillProgress"></div>
+                </div>
+            </div>
+        </div>
+        <div class="beforeMyProjects hr"></div>
+        <div class="myProjects contents">
+            <h1 class="projectText stickyPosition">My Projects</h1>
+            <div class="UIProjects" data-aos="flip-down">
+                <h3 class="UIProjectsText commonHeading">UI Designs</h3>
+                <!-- <div class="templates">
+                    <div class="firstTemplate template"></div>
+                    <div class="secondTemplate template"></div>
+                    <div class="thirdTemplate template"></div>
+                </div> -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide1">
+                            <img class="fullScreen firstDesign" src="./Screenshot (7).png" alt="">
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <img class="fullScreen secondDesign" src="./Screenshot (8).png" alt="">
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <img class="fullScreen thirdDesign" src="./Screenshot (9).png" alt="">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div class="Animations" data-aos="flip-up">
+                <h3 class="animationText commonHeading">CSS Animations</h3>
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="fullScreen firstAnimation" src="./Screenshot (10).png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="fullScreen secondAnimation" src="./Screenshot (11).png" alt="">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div class="PureCssArts" data-aos="fade-up">
+                <h3 class="pureCssArtText commonHeading">Pure CSS Arts</h3>
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="fullScreen firstArt" src="./Screenshot (12).png" alt="" class="fullScreen">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="fullScreen secondArt" src="./Screenshot (13).png" alt="" class="fullScreen">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../jquery-3.5.1.min.js"></script>
+<script src="../commonScript/common.js"></script>
+<script src="./main.js"></script>
+
+</html>
