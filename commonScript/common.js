@@ -12,13 +12,13 @@ $(".home").click(() => {
         $(".navPage").removeClass("navPageOpen");
     }
     else if ($(".section").hasClass("thisIsAboutMe")) {
-        window.location.href = "../";
+        window.location.href = "https://05shourya.github.io/shourya/";
     }
 })
 
 $(".aboutMe").click(() => {
     if ($(".section").hasClass("thisIsHome")) {
-        window.location.href = "./aboutMe/"
+        window.location.href = "https://05shourya.github.io/shourya/aboutMe/"
     }
     else if ($(".section").hasClass("thisIsAboutMe")) {
         $(".navPage").removeClass("navPageOpen");
