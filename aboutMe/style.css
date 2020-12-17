@@ -84,6 +84,14 @@ html {
     color: rgb(222, 230, 83);
 }
 
+.note{
+    color: rgba(16, 211, 104, 0.741);
+}
+
+.noteMain{
+    color: rgb(255, 255, 255);
+}
+
 .contents {
     width: -webkit-max-content;
     width: -moz-max-content;
