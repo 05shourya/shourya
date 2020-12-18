@@ -4,7 +4,13 @@
 
 $(".lineContainer").click(() => {
     $(".navPage").toggleClass("navPageOpen")
-    // $(".section").toggleClass("hideScroll")
+    $("body").toggleClass("hideScroll")
+})
+
+$(document).on('click', function(event) {
+    if(!$(event.target).closest('.navPage , .hamburgerMenu').length){
+        $('.navPage').removeClass('navPageOpen') ; 
+    }
 })
 
 $(".home").click(() => {

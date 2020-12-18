@@ -10,6 +10,11 @@
     z-index: 99;
 }
 
+.hideScroll{
+    /* position: fixed; */
+    overflow-y: hidden;
+}
+
 .lines {
     background: rgba(248, 238, 238, 0.8);
     width: 3rem;
