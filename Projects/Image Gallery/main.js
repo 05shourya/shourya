@@ -39,7 +39,7 @@ window.onload = () => {
     let dataVariable = fetchFunc();
     const createElementFunc = () => {
         dataVariable.then((data) => {
-            console.log(data)
+            // console.log(data)
             if (data.total != 0) {
                 $('.Error').css({
                     'display': 'none',
@@ -56,7 +56,6 @@ window.onload = () => {
                         buttonParent = document.createElement('div'),
                         cradit = document.createElement('div'),
                         craditItems = document.createElement('div');
-                    ImageTag.src = data.results[i].urls.regular;
                     craditItems.classList = `craditItems`;
                     buttonParent.classList = `buttonParent`;
                     ImageInfoButtonLines.classList = `ImageInfoButtonLines`;
@@ -175,15 +174,15 @@ window.onload = () => {
     let imageTag = document.getElementsByClassName('image');
 
 
-    // const addingSrc = () => {
-    //     dataVariable.then((data) => {
-    //         for (let i = 0; i < data.results.length; i++) {
-    //             imageTag[i].src = data.results[i].urls.full;
-    //         }
-    //     })
-    // }
+    const addingSrc = () => {
+        dataVariable.then((data) => {
+            for (let i = 0; i < data.results.length; i++) {
+                imageTag[i].src = data.results[i].urls.regular;
+            }
+        })
+    }
 
-    // addingSrc();
+    addingSrc();
 
 
     let search = document.getElementById('searchButton');
