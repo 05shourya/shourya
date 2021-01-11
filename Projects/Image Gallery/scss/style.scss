@@ -95,34 +95,9 @@ body {
 .theDocument {
     background: $bg-clr;
     top: 8rem;
-    // border: medium solid white;
     position: relative;
     display: grid;
     min-height: calc(100vh - 12rem);
-
-    .LoadButton {
-        width: 13rem;
-        height: 4rem;
-        background: rgb(55, 76, 233);
-        color: rgb(233, 229, 229);
-        border-radius: 0.5rem;
-        -webkit-border-radius: 0.5rem;
-        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        -o-border-radius: 0.5rem;
-        @include gridCenter();
-        display: none;
-        justify-self: center;
-        margin-top: 2rem;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 1.2em;
-    }
 
     .gallery {
         display: grid;
@@ -180,6 +155,41 @@ body {
             -o-border-radius: 0.2rem;
         }
     }
+}
+
+.buttons {
+    @include flexCenter();
+    margin-top: 2rem;
+}
+
+.commonProperties {
+    width: 13rem;
+    height: 4rem;
+    background: rgb(55, 76, 233);
+    color: rgb(233, 229, 229);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    @include gridCenter();
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    display: none;
+}
+
+.LoadButton {
+    margin-left: 1rem;
+}
+
+.previousButton {
+    margin-right: 1rem;
 }
 
 .ImageInfoButton {
@@ -353,6 +363,7 @@ body {
     // @include gridCenter();
     // place-items: center;
     text-align: center;
+    // z-index: -7;
 
     // * {
     //     // margin-bottom:;

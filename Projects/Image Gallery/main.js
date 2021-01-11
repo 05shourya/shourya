@@ -15,6 +15,7 @@ window.onload = () => {
 
     let query = document.getElementById('search');
     let LoadButton = document.getElementById('LoadButton');
+    let previousButton = document.getElementById('previousButton');
     let LoadMore = document.getElementById('LoadMore');
 
     let randomKeyIndex = Math.floor(Math.random() * (keywords.length));
@@ -39,6 +40,7 @@ window.onload = () => {
     let dataVariable = fetchFunc();
     const createElementFunc = () => {
         dataVariable.then((data) => {
+
             // console.log(data)
             if (data.total != 0) {
                 $('.Error').css({
@@ -87,6 +89,7 @@ window.onload = () => {
                         ImageTag.style.display = 'block';
                         ImageParent.style.background = 'transparent';
                         LoadButton.style.display = 'grid';
+
                     }
                     // console.log($(ImageParent))
 
@@ -220,13 +223,29 @@ window.onload = () => {
         eventFunc(PageNo);
         dataVariable.then((data) => {
             if (data.total == 0) {
-                $(LoadButton).css({
+                $('#LoadButton , #previousButton').css({
                     'display': 'none'
                 })
             } else {
-                $(LoadButton).css({
+                $('#LoadButton , #previousButton').css({
                     'display': 'grid'
                 })
+            }
+        })
+    })
+
+    $(previousButton).click(() => {
+        dataVariable.then((data) => {
+            if (PageNo > 1) {
+                previousButton.style.display = 'grid';
+                PageNo--;
+                eventFunc(PageNo)
+            } else {
+                swal('You are already on the First Page for your search', {
+                    icon: 'warning',
+                    title: 'First Page'
+                });
+                previousButton.style.display = 'none';
             }
         })
     })
@@ -234,6 +253,8 @@ window.onload = () => {
     $(LoadButton).click(() => {
         dataVariable.then((data) => {
             if (data.total_pages > PageNo) {
+                LoadButton.style.display = 'grid';
+                previousButton.style.display = 'grid';
                 PageNo++;
                 eventFunc(PageNo);
             }
@@ -242,6 +263,7 @@ window.onload = () => {
                     icon: 'warning',
                     title: 'Last Page'
                 });
+                LoadButton.style.display = 'none';
             }
         })
     })
