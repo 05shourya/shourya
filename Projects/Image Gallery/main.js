@@ -6,6 +6,8 @@ AOS.init({
 
 window.onload = () => {
 
+    swal('Click On any Image for better view and more options');
+
     let gallery = document.getElementById('gallery')
     let Colors = ['#F44336', '#5E35B1', '#84FFFF', '#EEFF41', '#FFEB3B', '#FB8C00', '#0f9d58'];
 
