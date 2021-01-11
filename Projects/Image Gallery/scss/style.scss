@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,800&family=Quicksand:wght@400;500&display=swap");
+
+@mixin gridCenter {
+    display: grid;
+    place-content: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+}
+
+$bg-clr: rgb(47, 54, 68);
+
+// .btn-outline-secondary {
+//     // margin: 2rem;
+//     position: relative;
+//     left: 3rem;
+// }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $bg-clr;
+}
+
+.upperBody {
+    max-width: 100%;
+    width: 100vw;
+    height: 7rem;
+    background: lighten(rgb(238, 30, 30), 10%);
+    // background: #ddd;
+    position: fixed;
+    left: 0;
+    top: 0;
+    @include gridCenter();
+    z-index: 55;
+
+    .searchBar {
+        @include flexCenter();
+    }
+
+    #search {
+        width: 30rem;
+        height: 4rem;
+        //position: absolute;
+        //right: 10rem;
+        //bottom: 2rem;
+        background: $bg-clr;
+        color: #ddd;
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        border: transparent;
+        outline: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-right: 2rem;
+        text-align: center;
+    }
+    .searchButton {
+        @include gridCenter();
+        background: rgb(60, 98, 211);
+        width: 4rem;
+        height: 4rem;
+        // position: absolute;
+        // right: 6rem;
+        // bottom: 2rem;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        &:hover {
+            background: darken(rgb(60, 98, 211), 20%);
+            color: #fff;
+        }
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.theDocument {
+    background: $bg-clr;
+    top: 8rem;
+    // border: medium solid white;
+    position: relative;
+    display: grid;
+    min-height: calc(100vh - 12rem);
+
+    .LoadButton {
+        width: 13rem;
+        height: 4rem;
+        background: rgb(55, 76, 233);
+        color: rgb(233, 229, 229);
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        @include gridCenter();
+        display: none;
+        justify-self: center;
+        margin-top: 2rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 1rem;
+        // -moz-column-gap: 1rem;
+        //      column-gap: 1rem;
+        // border: medium solid black;
+        place-items: center;
+        margin: 0.4rem;
+        // min-height: calc(100vh - 13rem);
+
+        .Error {
+            width: 80vw;
+            height: 20rem;
+            -o-object-fit: cover;
+            object-fit: cover;
+            font-family: "Montserrat", sans-serif;
+            @include gridCenter();
+            color: rgb(126, 120, 120);
+            display: none;
+
+            .searchError {
+                width: 6rem;
+                height: 6rem;
+                justify-self: center;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .ImageParent {
+            width: 20rem;
+            // height: 5rem;
+            height: 20rem;
+            // grid-row: span 1;
+            // grid-column: span 1;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            color: #fff;
+            font-size: 1.4em;
+            // letter-spacing: 0.4rem;
+            // -o-object-fit: cover;
+            // object-fit: cover;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+            }
+            border-radius: 0.2rem;
+            -webkit-border-radius: 0.2rem;
+            -moz-border-radius: 0.2rem;
+            -ms-border-radius: 0.2rem;
+            -o-border-radius: 0.2rem;
+        }
+    }
+}
+
+.ImageInfoButton {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(225, 225, 225, 0.2);
+    z-index: 55;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    cursor: pointer;
+    display: none;
+
+    .ImageInfoButtonLines {
+        width: 2rem;
+        height: 0.2rem;
+        background: rgb(17, 17, 17);
+        position: relative;
+        top: 3rem/2 - 0.15rem;
+        left: 3rem/2 - 1rem;
+
+        &::after,
+        &::before {
+            content: "";
+            width: 2rem;
+            height: 0.2rem;
+            position: absolute;
+            //margin: 0.4rem;
+            //top: 3rem/2 - 0.15rem - 0.15rem;
+            //left: 3rem/2 - 1rem;
+            //top: 0.5rem;
+            background: rgb(17, 17, 17);
+            left: 0;
+            //bottom: -1rem;
+            //top: 1rem;
+            border-radius: 0.8rem;
+            -webkit-border-radius: 0.8rem;
+            -moz-border-radius: 0.8rem;
+            -ms-border-radius: 0.8rem;
+            -o-border-radius: 0.8rem;
+        }
+        &::before {
+            bottom: 0.5rem;
+        }
+        &::after {
+            top: 0.5rem;
+        }
+        border-radius: 0.8rem;
+        -webkit-border-radius: 0.8rem;
+        -moz-border-radius: 0.8rem;
+        -ms-border-radius: 0.8rem;
+        -o-border-radius: 0.8rem;
+    }
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+
+.ImageInfo {
+    min-width: 80%;
+    height: 100%;
+    background: rgba(230, 223, 223, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    //@includegridCenter():;
+    display: none;
+    justify-items: center;
+    align-content: center;
+    padding: 0;
+    transition: 0.4s;
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.ImageInfoOpen {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    //left: 0;
+}
+
+.buttonParent {
+    // border: medium solid black;
+    @include gridCenter();
+}
+
+.infoButton {
+    min-width: 10rem;
+    height: 2.5rem;
+    background: $bg-clr;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    // font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    @include gridCenter();
+    color: rgb(214, 214, 214);
+    margin: 0.6rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    * {
+        margin: 0;
+    }
+}
+
+.cradits {
+    min-width: 95%;
+    min-height: 3rem;
+    background: $bg-clr;
+    //align-self: end;
+    position: absolute;
+    bottom: 0.3rem;
+    margin: 0;
+    left: 0;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    -webkit-border-radius: 0 0.3rem 0.3rem 0;
+    -moz-border-radius: 0 0.3rem 0.3rem 0;
+    -ms-border-radius: 0 0.3rem 0.3rem 0;
+    -o-border-radius: 0 0.3rem 0.3rem 0;
+    @include gridCenter();
+}
+
+.craditItems {
+    @include flexCenter();
+
+    * {
+        margin: 0.4rem;
+    }
+
+    .fa-instagram {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    background: rgb(40, 43, 48);
+    max-width: 100%;
+    width: 100vw;
+    height: 15rem;
+    position: relative;
+    top: 7rem;
+    margin-top: 3rem;
+    color: #ddd;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem;
+    @include gridCenter();
+    // place-items: center;
+    text-align: center;
+
+    // * {
+    //     // margin-bottom:;
+    // }
+
+    .MadeBy {
+        font-size: 1.3em;
+    }
+
+    .shourya {
+        -webkit-text-decoration: overline;
+        text-decoration: overline;
+        color: rgb(154, 186, 221);
+    }
+
+    .getSplash {
+        letter-spacing: 0.5rem;
+        // text-transform: uppercase;
+        color: rgb(142, 143, 143);
+        font-weight: 400;
+        font-size: 2em;
+        margin-top: 1rem;
+        span {
+            vertical-align: sub;
+        }
+    }
+
+    .sitecradit {
+        font-size: 0.8em;
+        line-height: 2rem;
+        letter-spacing: 0.2rem;
+        word-spacing: 0.2rem;
+
+        .unsplash {
+            text-decoration: none;
+            color: rgb(133, 194, 150);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .upperBody {
+        #search {
+            width: 22rem;
+        }
+        .searchButton {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}

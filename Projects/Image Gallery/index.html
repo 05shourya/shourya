@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSplash</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./Font Awesome/fontAwesome/all.css">
+    <link rel="stylesheet" href="./AOS/dist/aos.css">
+</head>
+
+<body>
+    <div class="WholeBody">
+        <div class="upperBody" id='UpperBody'>
+            <div class="searchBar">
+                <input type="text" name="search" placeholder="Search for Images" id="search">
+                <div class="searchButton" id='searchButton'>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <section class="theDocument">
+            <div class="gallery" id="gallery">
+                <div class="Error">
+                    <img src="./SVG Icons/loupe.svg" alt="" class="searchError">
+                    <h1 class="errorHeading">Couldn't find the Page You were looking for</h1>
+                </div>
+            </div>
+            <div class="LoadButton" id="LoadButton">
+                <h4 class="LoadMore" id="LoadMore">Next Page</h4>
+            </div>
+        </section>
+        <div class="footer">
+            <p class="MadeBy">Made with &hearts; by <a href="https://05shourya.github.io/shourya/aboutMe/"
+                    class="shourya">Shourya</a></p>
+            <p class="sitecradit"> This Product fetches Images from <a href="https://unsplash.com/">Unsplash</a> and
+                displays them according to user's Search .The SVG search icon is made by <a
+                    href="https://www.flaticon.com/">freepik</a> from <a
+                    href="https://www.flaticon.com/authors/freepik">Flaticon</a> . Read terms and conditions of <a
+                    href="https://unsplash.com/" class="unsplash">Unsplash.com</a> <a
+                    href="https://unsplash.com/terms">Here</a>
+            </p>
+            <p class="getSplash">Get<span>Splash</span></p>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="./JQuery/jquery-3.5.1.min.js"></script>
+<script src="./AOS/dist/aos.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="main.js"></script>
+
+</html>
