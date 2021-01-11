@@ -138,7 +138,6 @@ window.onload = () => {
                         ImageInfo.style.display = 'grid';
                         $(`.image${i}`).css({
                             'max-width': '70vh',
-                            'min-height': '100%'
                         })
                     })
 
