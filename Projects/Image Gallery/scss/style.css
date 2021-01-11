@@ -329,6 +329,9 @@ body {
   max-width: 100%;
   width: 100vw;
   min-height: 15rem;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   position: relative;
   top: 7rem;
   margin-top: 3rem;
