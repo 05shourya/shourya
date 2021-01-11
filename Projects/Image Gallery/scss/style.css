@@ -340,9 +340,6 @@ body {
   font-weight: 400;
   letter-spacing: 0.2rem;
   word-spacing: 0.3rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
   text-align: center;
 }
 
