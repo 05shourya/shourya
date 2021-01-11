@@ -146,8 +146,8 @@ body {
 }
 
 .theDocument .gallery .ImageParent {
-  width: 20rem;
-  height: 20rem;
+  min-width: 20rem;
+  min-height: 20rem;
   overflow: hidden;
   position: relative;
   text-align: center;

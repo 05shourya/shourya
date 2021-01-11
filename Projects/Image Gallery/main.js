@@ -39,7 +39,7 @@ window.onload = () => {
     let dataVariable = fetchFunc();
     const createElementFunc = () => {
         dataVariable.then((data) => {
-            // console.log(data)
+            console.log(data)
             if (data.total != 0) {
                 $('.Error').css({
                     'display': 'none',
@@ -56,11 +56,12 @@ window.onload = () => {
                         buttonParent = document.createElement('div'),
                         cradit = document.createElement('div'),
                         craditItems = document.createElement('div');
+                    ImageTag.src = data.results[i].urls.regular;
                     craditItems.classList = `craditItems`;
                     buttonParent.classList = `buttonParent`;
                     ImageInfoButtonLines.classList = `ImageInfoButtonLines`;
                     $('<h6>Visit </h6>').appendTo(visitImage);
-                    $('<h6>View</h6>').appendTo(viewImage);
+                    $('<h6>View HQ</h6>').appendTo(viewImage);
                     $(`<h5>By ${data.results[i].user.name}</h5>`).appendTo(craditItems);
                     $(`<i class="fab fa-instagram instagram${i}"></i>`).appendTo(craditItems);
                     $(cradit).append(craditItems);
@@ -137,6 +138,7 @@ window.onload = () => {
                         ImageInfo.style.display = 'grid';
                         $(`.image${i}`).css({
                             'max-width': '70vh',
+                            'min-height': '100%'
                         })
                     })
 
@@ -174,15 +176,15 @@ window.onload = () => {
     let imageTag = document.getElementsByClassName('image');
 
 
-    const addingSrc = () => {
-        dataVariable.then((data) => {
-            for (let i = 0; i < data.results.length; i++) {
-                imageTag[i].src = data.results[i].urls.full;
-            }
-        })
-    }
+    // const addingSrc = () => {
+    //     dataVariable.then((data) => {
+    //         for (let i = 0; i < data.results.length; i++) {
+    //             imageTag[i].src = data.results[i].urls.full;
+    //         }
+    //     })
+    // }
 
-    addingSrc();
+    // addingSrc();
 
 
     let search = document.getElementById('searchButton');
@@ -204,7 +206,7 @@ window.onload = () => {
         dataVariable.then((data) => {
             // console.log(data)
             for (let i = 0; i < data.results.length; i++) {
-                imageTag[i].src = data.results[i].urls.full;
+                imageTag[i].src = data.results[i].urls.regular;
             }
         })
     }
