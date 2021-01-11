@@ -81,7 +81,7 @@ window.onload = () => {
                     $(buttonParent).append(visitImage, viewImage)
                     $(ImageInfo).append(buttonParent, cradit);
                     $(ImageParent).append(ImageTag, ImageInfo, ImageInfoButton);
-                    $(gallery).prepend(ImageParent);
+                    gallery.appendChild(ImageParent);
                     ImageTag.style.display = 'none'
                     ImageTag.onload = () => {
                         ImageTag.style.display = 'block';
