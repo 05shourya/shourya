@@ -58,9 +58,9 @@ $(document).ready(() => {
     //     window.open("../Projects/musicApp Theme 2/index.html" , "_blank")
     // })
 
-    let ArrayOfClasses = [".firstDesign", ".secondDesign", ".thirdDesign", ".firstAnimation", ".secondAnimation", ".firstArt", ".secondArt"]
+    let ArrayOfClasses = [".firstDesign", ".secondDesign", ".thirdDesign", ".fourthDesign", ".firstAnimation", ".secondAnimation", ".firstArt", ".secondArt"]
 
-    let locations = ["../Projects/musicApp Theme 3/index.html", "../Projects/musicApp Theme/index.html", "../Projects/musicApp Theme 2/index.html", "../Projects/CssAnimations/index.html", "../Projects/Css Animations 2/index.html", "../Projects/Google/index.html", "../Projects/PureCSS Drawing/index.html"]
+    let locations = ["../Projects/musicApp Theme 3/index.html", "../Projects/musicApp Theme/index.html", "../Projects/musicApp Theme 2/index.html", "../Projects/Image%20Gallery/", "../Projects/CssAnimations/index.html", "../Projects/Css Animations 2/index.html", "../Projects/Google/index.html", "../Projects/PureCSS Drawing/index.html"]
 
     for (let index = 0; index < ArrayOfClasses.length; index++) {
         // console.log(ArrayOfClasses[index]) ; 
@@ -75,13 +75,13 @@ $(document).ready(() => {
     let skillClasses = ['.html', '.js', '.css', '.bootstrap', '.JQuery', '.etc']
 
     for (let i = 0; i < skillClasses.length; i++) {
-        
+
         $(skillClasses[i]).on('touchstart mouseenter', () => {
             // console.log("hello world")
             $(skillClasses[i]).addClass("darken")
         })
 
-        $(skillClasses[i]).on('touchend mouseleave' , () => {
+        $(skillClasses[i]).on('touchend mouseleave', () => {
             $(skillClasses[i]).removeClass('darken');
         })
         // console.log(element)
