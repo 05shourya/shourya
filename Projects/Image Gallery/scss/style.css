@@ -1,433 +1,417 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600;1,800&family=Quicksand:wght@400;500&display=swap");
 body {
-  margin: 0;
-  padding: 0;
-  background: #2f3644;
+    margin: 0;
+    padding: 0;
+    background: #2f3644;
 }
 
 .upperBody {
-  max-width: 100%;
-  width: 100vw;
-  height: 7rem;
-  background: #f24d4d;
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  z-index: 55;
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
+    max-width: 100%;
+    width: 100vw;
+    height: 7rem;
+    background: #f24d4d;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    z-index: 55;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 
 .upperBody .searchBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+    display: flex;
+    place-content: center;
+    flex-direction: row;
 }
 
 .upperBody #search {
-  width: 30rem;
-  height: 4rem;
-  background: #2f3644;
-  color: #ddd;
-  border-radius: 3rem;
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
-  -ms-border-radius: 3rem;
-  -o-border-radius: 3rem;
-  border: transparent;
-  outline: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1.2em;
-  margin-right: 2rem;
-  text-align: center;
+    width: 30rem;
+    height: 4rem;
+    background: #2f3644;
+    color: #ddd;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    border: transparent;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-right: 2rem;
+    text-align: center;
 }
 
 .upperBody .searchButton {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  background: #3c62d3;
-  width: 4rem;
-  height: 4rem;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    background: #3c62d3;
+    width: 4rem;
+    height: 4rem;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .upperBody .searchButton:hover {
-  background: #1f3a8a;
-  color: #fff;
+    background: #1f3a8a;
+    color: #fff;
 }
 
 .theDocument {
-  background: #2f3644;
-  top: 8rem;
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  min-height: calc(100vh - 12rem);
+    background: #2f3644;
+    top: 8rem;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    min-height: calc(100vh - 12rem);
 }
 
 .theDocument .gallery {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 1rem;
-  place-items: center;
-  margin: 0.4rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(20rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+    margin: 0.4rem;
 }
 
 .theDocument .gallery .Error {
-  width: 80vw;
-  height: 20rem;
-  -o-object-fit: cover;
-  object-fit: cover;
-  font-family: "Montserrat", sans-serif;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  color: #7e7878;
-  display: none;
+    width: 80vw;
+    height: 20rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    font-family: "Montserrat", sans-serif;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    color: #7e7878;
+    display: none;
 }
 
 .theDocument .gallery .Error .searchError {
-  width: 6rem;
-  height: 6rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin-bottom: 2rem;
+    width: 6rem;
+    height: 6rem;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-bottom: 2rem;
 }
 
 .theDocument .gallery .ImageParent {
-  width: 20rem;
-  height: 20rem;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  color: #fff;
-  font-size: 1.4em;
-  border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  -moz-border-radius: 0.2rem;
-  -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
 }
 
 .theDocument .gallery .ImageParent .image {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 2rem;
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    margin-top: 2rem;
 }
 
 .commonProperties {
-  width: 13rem;
-  height: 4rem;
-  background: #374ce9;
-  color: #e9e5e5;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1.2em;
-  display: none;
+    width: 13rem;
+    height: 4rem;
+    background: #374ce9;
+    color: #e9e5e5;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    display: none;
 }
 
 .LoadButton {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .previousButton {
-  margin-right: 1rem;
+    margin-right: 1rem;
 }
 
 .ImageInfoButton {
-  width: 3rem;
-  height: 3rem;
-  background: rgba(225, 225, 225, 0.2);
-  z-index: 55;
-  position: fixed;
-  top: 0.5rem;
-  left: 0.5rem;
-  cursor: pointer;
-  display: none;
-  border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  -moz-border-radius: 0.2rem;
-  -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(225, 225, 225, 0.2);
+    z-index: 55;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    cursor: pointer;
+    display: none;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
 }
 
 .ImageInfoButton .ImageInfoButtonLines {
-  width: 2rem;
-  height: 0.2rem;
-  background: #111111;
-  position: relative;
-  top: 1.35rem;
-  left: 0.5rem;
-  border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
+    width: 2rem;
+    height: 0.2rem;
+    background: #111111;
+    position: relative;
+    top: 1.35rem;
+    left: 0.5rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
 }
 
-.ImageInfoButton .ImageInfoButtonLines::after, .ImageInfoButton .ImageInfoButtonLines::before {
-  content: "";
-  width: 2rem;
-  height: 0.2rem;
-  position: absolute;
-  background: #111111;
-  left: 0;
-  border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
+.ImageInfoButton .ImageInfoButtonLines::after,
+.ImageInfoButton .ImageInfoButtonLines::before {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    position: absolute;
+    background: #111111;
+    left: 0;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
 }
 
 .ImageInfoButton .ImageInfoButtonLines::before {
-  bottom: 0.5rem;
+    bottom: 0.5rem;
 }
 
 .ImageInfoButton .ImageInfoButtonLines::after {
-  top: 0.5rem;
+    top: 0.5rem;
 }
 
 .ImageInfo {
-  min-width: 80%;
-  height: 100%;
-  background: rgba(230, 223, 223, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  justify-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 0;
-  transition: 0.4s;
-  transform: translateX(150%);
-  -webkit-transform: translateX(150%);
-  -moz-transform: translateX(150%);
-  -ms-transform: translateX(150%);
-  -o-transform: translateX(150%);
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
+    min-width: 80%;
+    height: 100%;
+    background: rgba(230, 223, 223, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-items: center;
+    align-content: center;
+    padding: 0;
+    transition: 0.4s;
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 
 .ImageInfoOpen {
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }
 
 .buttonParent {
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
 }
 
 .infoButton {
-  min-width: 10rem;
-  height: 2.5rem;
-  background: #2f3644;
-  border-radius: 3rem;
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
-  -ms-border-radius: 3rem;
-  -o-border-radius: 3rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  color: #d6d6d6;
-  margin: 0.6rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    min-width: 10rem;
+    height: 2.5rem;
+    background: #2f3644;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    color: #d6d6d6;
+    margin: 0.6rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .infoButton * {
-  margin: 0;
+    margin: 0;
 }
 
 .cradits {
-  min-width: 95%;
-  min-height: 3rem;
-  background: #2f3644;
-  position: absolute;
-  bottom: 0.3rem;
-  margin: 0;
-  left: 0;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
-  border-radius: 0 0.3rem 0.3rem 0;
-  -webkit-border-radius: 0 0.3rem 0.3rem 0;
-  -moz-border-radius: 0 0.3rem 0.3rem 0;
-  -ms-border-radius: 0 0.3rem 0.3rem 0;
-  -o-border-radius: 0 0.3rem 0.3rem 0;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
+    min-width: 95%;
+    min-height: 3rem;
+    background: #2f3644;
+    position: absolute;
+    bottom: 0.3rem;
+    margin: 0;
+    left: 0;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+    -webkit-border-radius: 0 0.3rem 0.3rem 0;
+    -moz-border-radius: 0 0.3rem 0.3rem 0;
+    -ms-border-radius: 0 0.3rem 0.3rem 0;
+    -o-border-radius: 0 0.3rem 0.3rem 0;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
 }
 
 .craditItems {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+    display: flex;
+    place-content: center;
+    flex-direction: row;
 }
 
 .craditItems * {
-  margin: 0.4rem;
+    margin: 0.4rem;
 }
 
 .craditItems .fa-instagram {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .footer {
-  background: #282b30;
-  max-width: 100%;
-  width: 100vw;
-  min-height: 20rem;
-  max-height: 25rem;
-  position: relative;
-  top: 10rem;
-  margin-top: 4rem;
-  color: #ddd;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.3rem;
-  text-align: center;
+    background: #282b30;
+    max-width: 100%;
+    width: 100vw;
+    min-height: 20rem;
+    max-height: 25rem;
+    position: relative;
+    top: 10rem;
+    margin-top: 4rem;
+    color: #ddd;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.3rem;
+    text-align: center;
 }
 
 .footer .MadeBy {
-  font-size: 1.3em;
-  position: relative;
-  top: 2rem;
+    font-size: 1.3em;
+    position: relative;
+    top: 2rem;
 }
 
 .footer .shourya {
-  -webkit-text-decoration: overline;
-  text-decoration: overline;
-  color: #9abadd;
+    -webkit-text-decoration: overline;
+    text-decoration: overline;
+    color: #9abadd;
 }
 
 .footer .getSplash {
-  letter-spacing: 0.5rem;
-  color: #8e8f8f;
-  font-weight: 400;
-  font-size: 2em;
-  position: relative;
-  top: 2rem;
+    letter-spacing: 0.5rem;
+    color: #8e8f8f;
+    font-weight: 400;
+    font-size: 2em;
+    position: relative;
+    top: 2rem;
 }
 
 .footer .getSplash span {
-  vertical-align: sub;
+    vertical-align: sub;
 }
 
 .footer .sitecradit {
-  font-size: 0.8em;
-  line-height: 2rem;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.2rem;
-  position: relative;
-  top: 2rem;
+    font-size: 0.8em;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+    position: relative;
+    top: 2rem;
 }
 
 .footer .sitecradit .unsplash {
-  text-decoration: none;
-  color: #85c296;
+    text-decoration: none;
+    color: #85c296;
 }
 
 @media screen and (max-width: 700px) {
-  html {
-    font-size: 80%;
-  }
+    html {
+        font-size: 80%;
+    }
 }
 
 @media screen and (max-width: 580px) {
-  html {
-    font-size: 70%;
-  }
+    html {
+        font-size: 70%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 60%;
-  }
+    html {
+        font-size: 60%;
+    }
 }
 
 @media screen and (max-width: 350px) {
-  html {
-    font-size: 50%;
-  }
+    html {
+        font-size: 50%;
+    }
 }
 
 @media screen and (max-width: 320px) {
-  .upperBody #search {
-    width: 22rem;
-  }
-  .upperBody .searchButton {
-    width: 3rem;
-    height: 3rem;
-  }
+    .upperBody #search {
+        width: 22rem;
+    }
+    .upperBody .searchButton {
+        width: 3rem;
+        height: 3rem;
+    }
 }
-/*# sourceMappingURL=style.css.map */
