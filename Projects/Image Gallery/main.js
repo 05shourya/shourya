@@ -288,7 +288,7 @@ window.onload = () => {
 
     $(window).on('hashchange', (e) => {
         e.preventDefault();
-        hashValueFunc();
+        query.value = location.hash.substring(1);
         search.click();
     })
 
