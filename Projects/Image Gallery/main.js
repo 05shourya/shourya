@@ -17,17 +17,14 @@ window.onload = () => {
     let LoadButton = document.getElementById('LoadButton');
     let previousButton = document.getElementById('previousButton');
     let LoadMore = document.getElementById('LoadMore');
+    let randomKeyIndex = Math.floor(Math.random() * (keywords.length));
+    let searchClick = false;
 
     const hashValueFunc = () => {
         if (location.hash == '') {
-            let randomKeyIndex = Math.floor(Math.random() * (keywords.length));
             query.value = keywords[randomKeyIndex];
         } else {
-            if (location.hash.includes('%20')) {
-                query.value = location.hash.substring(1).replace(/%20/g, ' ');
-            } else if (location.hash.includes('+')) {
-                query.value = location.hash.substring(1).replace(/+/g, ' ');
-            }
+            query.value = location.hash.substring(1).replace(/%20/g, ' ');
         }
     }
 
@@ -35,8 +32,6 @@ window.onload = () => {
 
     searchValue = query.value;
     location.hash = searchValue;
-
-
 
     let clientID = 'paaIIZM7FwQ35wbx44h7kGuUCb6kw7dTecZD3erC6tM';
     let PageNo = 1;
@@ -207,7 +202,6 @@ window.onload = () => {
     const eventFunc = (noOfPage) => {
         LoadButton.style.display = 'grid';
         searchValue = document.getElementById('search').value;
-        location.hash = searchValue;
         $('.ImageParent').remove();
         const updateFetch = async () => {
             let updatedData = await fetch(`https://api.unsplash.com/search/photos/?client_id=${clientID}&query=${searchValue}&page=${noOfPage}&per_page=${itemsPerPage}`);
@@ -236,7 +230,13 @@ window.onload = () => {
         })
     });
 
-    search.addEventListener('click', () => {
+    $(search).on('click', (e) => {
+        location.hash = query.value;
+        // console.log('hello world')
+    })
+
+    $(window).on('hashchange', (e) => {
+        query.value = location.hash.substring(1).replace(/%20/g, ' ');
         PageNo = 1;
         eventFunc(PageNo);
         dataVariable.then((data) => {
@@ -284,12 +284,6 @@ window.onload = () => {
                 LoadButton.style.display = 'none';
             }
         })
-    })
-
-    $(window).on('hashchange', (e) => {
-        e.preventDefault();
-        query.value = location.hash.substring(1);
-        search.click();
     })
 
     let lastScrollTop = 0;
